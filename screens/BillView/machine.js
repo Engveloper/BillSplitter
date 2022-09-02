@@ -1,4 +1,4 @@
-import { createMachine } from 'xstate';
+import {createMachine} from 'xstate'
 
 export default createMachine({
   id: 'editBill',
@@ -28,4 +28,4 @@ export default createMachine({
       type: 'final',
     },
   },
-});
+})

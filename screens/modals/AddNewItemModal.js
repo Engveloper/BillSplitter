@@ -1,18 +1,18 @@
-import React, { useCallback, useState } from 'react';
+import React, {useCallback, useState} from 'react'
 
-import { View, Alert, StyleSheet, Text } from 'react-native';
-import { Button, Input } from '@rneui/themed';
-import { v4 as uuidv4 } from 'uuid';
+import {View, Alert, StyleSheet, Text} from 'react-native'
+import {Button, Input} from '@rneui/themed'
+import {v4 as uuidv4} from 'uuid'
 
-export default function AddNewItemModal({ navigation }) {
-  const [description, setDescription] = useState('');
-  const [quantity, setQuantity] = useState(1);
-  const [price, setPrice] = useState('');
+export default function AddNewItemModal({navigation}) {
+  const [description, setDescription] = useState('')
+  const [quantity, setQuantity] = useState(1)
+  const [price, setPrice] = useState('')
 
   const handleSubmit = useCallback(() => {
     if (!description) {
-      Alert.alert('Description is required');
-      return;
+      Alert.alert('Description is required')
+      return
     }
 
     const newItem = {
@@ -20,15 +20,15 @@ export default function AddNewItemModal({ navigation }) {
       description,
       quantity,
       price,
-    };
+    }
 
     navigation.navigate({
       name: 'BillView',
-      params: { newItem },
+      params: {newItem},
       merge: true,
-    });
+    })
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [description, quantity, price]);
+  }, [description, quantity, price])
 
   return (
     <View style={[styles.container]}>
@@ -56,7 +56,7 @@ export default function AddNewItemModal({ navigation }) {
       />
       <Button title="Save" onPress={handleSubmit} />
     </View>
-  );
+  )
 }
 
 const styles = StyleSheet.create({
@@ -64,4 +64,4 @@ const styles = StyleSheet.create({
     marginHorizontal: 20,
     marginTop: 20,
   },
-});
+})

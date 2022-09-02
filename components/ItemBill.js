@@ -1,8 +1,8 @@
-import React from 'react';
+import React from 'react'
 
-import { ListItem } from '@rneui/base';
+import {ListItem} from '@rneui/base'
 
-export default function ItemBill({ bill, onPress }) {
+export default function ItemBill({bill, onPress}) {
   return (
     <ListItem bottomDivider onPress={() => (onPress ? onPress(bill) : null)}>
       <ListItem.Content>
@@ -10,5 +10,5 @@ export default function ItemBill({ bill, onPress }) {
       </ListItem.Content>
       <ListItem.Chevron name="chevron-right" type="entypo" />
     </ListItem>
-  );
+  )
 }

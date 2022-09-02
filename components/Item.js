@@ -1,11 +1,11 @@
-import React from 'react';
+import React from 'react'
 
-import { ListItem } from '@rneui/base';
-import { View, Text, StyleSheet } from 'react-native';
-import { t } from 'react-native-tailwindcss';
+import {ListItem} from '@rneui/base'
+import {View, Text, StyleSheet} from 'react-native'
+import {t} from 'react-native-tailwindcss'
 
-export default function Item({ item, onPress }) {
-  console.log({ item });
+export default function Item({item, onPress}) {
+  console.log({item})
   return (
     <ListItem bottomDivider onPress={() => (onPress ? onPress(item) : null)}>
       <ListItem.Content>
@@ -18,7 +18,7 @@ export default function Item({ item, onPress }) {
         </ListItem.Subtitle>
       </ListItem.Content>
     </ListItem>
-  );
+  )
 }
 
 const styles = StyleSheet.create({
@@ -38,4 +38,4 @@ const styles = StyleSheet.create({
   price: {
     fontWeight: 'bold',
   },
-});
+})
