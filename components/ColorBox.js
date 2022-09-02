@@ -1,11 +1,11 @@
-import React from 'react';
+import React from 'react'
 
-import { View, StyleSheet, Text } from 'react-native';
+import {View, StyleSheet, Text} from 'react-native'
 
-export function ColorBox({ hexColor, name }) {
+export function ColorBox({hexColor, name}) {
   const colorStyle = {
     backgroundColor: hexColor,
-  };
+  }
 
   return (
     <View style={[styles.box, colorStyle]}>
@@ -13,7 +13,7 @@ export function ColorBox({ hexColor, name }) {
         {name}: {hexColor}
       </Text>
     </View>
-  );
+  )
 }
 
 const styles = StyleSheet.create({
@@ -38,4 +38,4 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     color: '#fff',
   },
-});
+})

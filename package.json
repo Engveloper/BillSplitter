@@ -3,11 +3,12 @@
   "version": "1.0.0",
   "main": "node_modules/expo/AppEntry.js",
   "scripts": {
-    "start": "expo start",
     "android": "expo start --android",
+    "fix": "eslint --fix \"**/*.{js,jsx}\"",
+    "format": "prettier --write \"**/*.{json,md,js,jsx}\"",
     "ios": "expo start --ios",
-    "web": "expo start --web",
-    "lint": "eslint ."
+    "start": "expo start",
+    "web": "expo start --web"
   },
   "dependencies": {
     "@react-native-community/masked-view": "^0.1.11",
